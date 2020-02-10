@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2020_02_10_211613) do
     t.string "name"
     t.string "description"
     t.string "park_code"
-    t.string "total_sites"
+    t.integer "total_sites"
     t.string "latlong"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

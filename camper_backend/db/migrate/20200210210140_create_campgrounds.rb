@@ -4,7 +4,7 @@ class CreateCampgrounds < ActiveRecord::Migration[6.0]
       t.string :name
       t.string :description
       t.string :park_code
-      t.string :total_sites
+      t.integer :total_sites
       t.string :latlong
 
       t.timestamps
