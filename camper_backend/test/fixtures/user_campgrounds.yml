@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  campground: one
+  camping_duration: 1
+
+two:
+  user: two
+  campground: two
+  camping_duration: 1
