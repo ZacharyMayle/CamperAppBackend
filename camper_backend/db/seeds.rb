@@ -1,7 +1,11 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+require 'pry'
+require 'rest-client'
+
+
+
+parks = RestClient.get "https://developer.nps.gov/api/v1/parks?stateCode=CO&api_key=3h90U6sxs7uzFVrhFU5PBItP0XZKV2cJWikfOeE5"
+parsed_json = JSON.parse(parks)
+parsed_parks = parsed_json["data"].map do |parsed_json|
+    {name: parsed_json["name"], code: parsed_json["parkCode"]}
+end
+binding.pry
