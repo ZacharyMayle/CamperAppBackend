@@ -15,6 +15,10 @@ parsed_campgrounds = parsed_json["data"].map do |campground|
     )
 end
 
+User.create(first_name: "Adam", last_name: "Shappy", current_state: "CO")
+User.create(first_name: "Zach", last_name: "Mayle", current_state: "CO")
+User.create(first_name: "Ahmed", last_name: "Gaber", current_state: "CO")
+User.create(first_name: "Barack", last_name: "Obama", current_state: "DC")
+User.create(first_name: "Tronald", last_name: "Dump", current_state: "DC")
 
-
-binding.pry
+# binding.pry
