@@ -1,7 +1,7 @@
 class UserCampgroundsController < ApplicationController
     def index
         @user_campgrounds = UserCampground.all
-        render json: @user_campgrounds
+        render json: @user_campgrounds, include: [:campground]
     end
 
     def show
@@ -17,6 +17,7 @@ class UserCampgroundsController < ApplicationController
         )
 
         render json: @user_campground
+
     end
 
     # def update

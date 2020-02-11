@@ -15,10 +15,13 @@ parsed_campgrounds = parsed_json["data"].map do |campground|
     )
 end
 
-User.create(first_name: "Adam", last_name: "Shappy", current_state: "CO")
-User.create(first_name: "Zach", last_name: "Mayle", current_state: "CO")
-User.create(first_name: "Ahmed", last_name: "Gaber", current_state: "CO")
-User.create(first_name: "Barack", last_name: "Obama", current_state: "DC")
-User.create(first_name: "Tronald", last_name: "Dump", current_state: "DC")
+user1 = User.create(first_name: "Adam", last_name: "Shappy", current_state: "CO")
+user2 = User.create(first_name: "Zach", last_name: "Mayle", current_state: "CO")
+user3 = User.create(first_name: "Ahmed", last_name: "Gaber", current_state: "CO")
+user4 = User.create(first_name: "Barack", last_name: "Obama", current_state: "DC")
+user5 = User.create(first_name: "Tronald", last_name: "Dump", current_state: "DC")
+
+# UserCampground.create(user: user1, campground_id: 62)
+
 
 # binding.pry

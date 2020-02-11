@@ -16,7 +16,8 @@ class UsersController < ApplicationController
             last_name: params[:last_name],
             current_state: params[:current_state]
         )
-        render json: @user
+        # render json: @user
+        redirect_to "http://localhost:3001/content.html"
     end
     
     def update
