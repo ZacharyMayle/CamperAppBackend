@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :parks
   resources :user_campgrounds
   resources :campgrounds
   resources :users
