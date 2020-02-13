@@ -27,10 +27,10 @@ class UserCampgroundsController < ApplicationController
         redirect_back(fallback_location: "http://localhost:3001")
     end
 
-    def delete
+    def destroy
         @user_campground = UserCampground.find(params[:id])
         @user_campground.destroy
 
-        render body: nil, status: :no_content
+        redirect_back(fallback_location: "http://localhost:3001")
     end
 end
