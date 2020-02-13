@@ -7,7 +7,7 @@ class UsersController < ApplicationController
     
     def show
         @user = User.find(params[:id])
-        redner json: @user
+        render json: @user, include: [:user_campgrounds]
     end
     
     def create
@@ -17,7 +17,7 @@ class UsersController < ApplicationController
             current_state: params[:current_state]
         )
         # render json: @user
-        redirect_to "http://localhost:3001/content.html"
+        redirect_to "http://localhost:3001/"
     end
     
     def update

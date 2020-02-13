@@ -1,7 +1,7 @@
 class UserCampgroundsController < ApplicationController
     def index
         @user_campgrounds = UserCampground.all
-        render json: @user_campgrounds, include: [:campground]
+        render json: @user_campgrounds, include: [:campground, :user]
     end
 
     def show
@@ -15,14 +15,18 @@ class UserCampgroundsController < ApplicationController
             campground: params[:campground],
             camping_duration: params[:camping_duration]
         )
-
         render json: @user_campground
-
     end
 
-    # def update
-        # use strong params so that you can only update the camping duration and not the user_id or the campground_id!!!!
-    # end
+    def update
+        @user_campground = UserCampground.find(params[:id])
+        @user_campground.update(
+            user: params[:user],
+            campground: params[:campground],
+            camping_duration: params[:camping_duration]
+        )
+        render json: @user_campground
+    end
 
     def delete
         @user_campground = UserCampground.find(params[:id])
