@@ -18,6 +18,13 @@ ActiveRecord::Schema.define(version: 2020_02_11_232037) do
     t.string "park_code"
     t.integer "total_sites"
     t.string "latlong"
+    t.string "weather"
+    t.string "wheel_chair"
+    t.string "cell_phone"
+    t.string "fire_stove"
+    t.string "toilets"
+    t.string "showers"
+    t.string "laundry"
     t.integer "park_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
