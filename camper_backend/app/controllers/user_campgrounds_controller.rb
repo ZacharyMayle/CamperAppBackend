@@ -21,11 +21,10 @@ class UserCampgroundsController < ApplicationController
     def update
         @user_campground = UserCampground.find(params[:id])
         @user_campground.update(
-            user: params[:user],
-            campground: params[:campground],
             camping_duration: params[:camping_duration]
         )
-        render json: @user_campground
+        # render json: @user_campground
+        redirect_back(fallback_location: "http://localhost:3001")
     end
 
     def delete
