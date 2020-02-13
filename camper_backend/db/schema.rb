@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 2020_02_11_232037) do
 
   create_table "parks", force: :cascade do |t|
     t.string "name"
+    t.string "latlong"
     t.string "designation"
     t.string "description"
     t.string "url"
