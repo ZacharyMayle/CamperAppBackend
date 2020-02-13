@@ -43,4 +43,5 @@ user3 = User.create(first_name: "Ahmed", last_name: "Gaber", current_state: "CO"
 user4 = User.create(first_name: "Barack", last_name: "Obama", current_state: "DC")
 user5 = User.create(first_name: "Tronald", last_name: "Dump", current_state: "DC")
 
-UserCampground.create(user: user1, campground_id: 1, camping_duration: 4)
+UserCampground.create(user_id: user1, campground_id: 1, camping_duration: 4)
+UserCampground.create(user_id: user2, campground_id: 2, camping_duration: 4)
