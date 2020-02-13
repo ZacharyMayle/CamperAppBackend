@@ -9,6 +9,7 @@ parsed_parks = JSON.parse(json_parks)
 parsed_parks["data"].map do |park|
     Park.create(
         name: park["name"],
+        latlong: park["latLong"],
         designation: park["designation"],
         description: park["description"],
         url: park["url"],
@@ -43,5 +44,18 @@ user3 = User.create(first_name: "Ahmed", last_name: "Gaber", current_state: "CO"
 user4 = User.create(first_name: "Barack", last_name: "Obama", current_state: "DC")
 user5 = User.create(first_name: "Tronald", last_name: "Dump", current_state: "DC")
 
-UserCampground.create(user_id: user1, campground_id: 1, camping_duration: 4)
-UserCampground.create(user_id: user2, campground_id: 2, camping_duration: 4)
+# UserCampground.create(user_id: user1, campground_id: 1, camping_duration: 4)
+# UserCampground.create(user_id: user2, campground_id: 2, camping_duration: 4)
+
+
+# seed California Historic Trail with LatLong
+Park.find(3).update(latlong: "lat:37.65518, long:-103.92598") 
+
+# seed Old Spanish National Historic Trail with LatLong
+Park.find(11).update(latlong: "lat:38.32189, long:-106.85933") 
+
+# seed Pony Express National Historic Trail with LatLong
+Park.find(12).update(latlong: "lat:40.93466, long:-102.32971") 
+
+# seed Santa Fe Trail with LatLong
+Park.find(15).update(latlong: "lat:37.65518, long:-103.92598") 
