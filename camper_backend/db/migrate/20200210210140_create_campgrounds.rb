@@ -6,6 +6,13 @@ class CreateCampgrounds < ActiveRecord::Migration[6.0]
       t.string :park_code
       t.integer :total_sites
       t.string :latlong
+      t.string :weather
+      t.string :wheel_chair
+      t.string :cell_phone
+      t.string :fire_stove
+      t.string :toilets
+      t.string :showers
+      t.string :laundry
       t.references :park, null: false, foreign_key: true
 
       t.timestamps

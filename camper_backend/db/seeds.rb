@@ -31,6 +31,13 @@ Park.all.map do |park|
                 park_code: campground["parkCode"],
                 total_sites: campground["campsites"]["totalsites"],
                 latlong: campground["latLong"],
+                weather: campground["weatheroverview"],
+                wheel_chair: campground["accessibility"]["wheelchairaccess"],
+                cell_phone: campground["accessibility"]["cellphoneinfo"],
+                fire_stove: campground["accessibility"]["firestovepolicy"],
+                toilets: campground["amenities"]["toilets"][0],
+                showers: campground["amenities"]["showers"][0],
+                laundry: campground["amenities"]["laundry"][0],
                 park_id: park.id
             )
         end
