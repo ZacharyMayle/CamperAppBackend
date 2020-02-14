@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 2020_02_11_232037) do
     t.string "toilets"
     t.string "showers"
     t.string "laundry"
+    t.boolean "big_foot_sightings"
     t.integer "park_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
