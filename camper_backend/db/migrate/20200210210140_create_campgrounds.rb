@@ -13,6 +13,7 @@ class CreateCampgrounds < ActiveRecord::Migration[6.0]
       t.string :toilets
       t.string :showers
       t.string :laundry
+      t.boolean :big_foot_sightings
       t.references :park, null: false, foreign_key: true
 
       t.timestamps

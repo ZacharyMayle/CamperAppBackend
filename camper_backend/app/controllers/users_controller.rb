@@ -16,8 +16,9 @@ class UsersController < ApplicationController
             last_name: params[:last_name],
             current_state: params[:current_state]
         )
-        # render json: @user
-        redirect_to "http://localhost:3001/"
+        redirect_to "http://localhost:3001/user-page.html?id=#{@user.id}"
+
+
     end
     
     def update

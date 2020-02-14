@@ -66,3 +66,15 @@ Park.find(12).update(latlong: "lat:40.93466, long:-102.32971")
 
 # seed Santa Fe Trail with LatLong
 Park.find(15).update(latlong: "lat:37.65518, long:-103.92598") 
+
+# random big foot generator
+def big_foot_sightings_randomizer
+    [true, false].sample
+end
+
+# update each Campground with big foot sighting randomizer
+Campground.all.map do |campground| 
+    campground.update(
+        big_foot_sightings: big_foot_sightings_randomizer
+    )
+end
